@@ -4,7 +4,7 @@
 
 TEST(TwoNormTests, BasicAssertions) {
   std::vector<double> v1 = {1.0, 0.0, 0.0};
-  EXPECT_EQ(calculateTwoNorm(v1), 1.1);
+  EXPECT_EQ(calculateTwoNorm(v1), 1.0);
 }
 
 TEST(DotProductTests, BasicAssertions) {

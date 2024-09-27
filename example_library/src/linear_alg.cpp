@@ -9,13 +9,13 @@
 */
 
 double calculateTwoNorm(const std::vector<double>& a) {
-    // IMPLEMENT ME
+  return cblas_dnrm2(a.size(), a.data(), 1);
 }
 
 double calculateDotProduct(const std::vector<double>& x, const std::vector<double>& y) {
-    // IMPLEMENT ME
+  return cblas_ddot(x.size(), x.data(), 1, y.data(), 1); 
 }
 
 double calculateProjection(const std::vector<double>& x, const std::vector<double>& y) {
-    // IMPLEMENT ME
+  return calculateDotProduct(x, y) / calculateTwoNorm(y); 
 }
